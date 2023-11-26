@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			.monospace {
+				font-family: monospace;
+			}
+		</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+	</head>
+	<body>
+
+		<script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+		<div id="protected">
+			<div id="Timer"></div>
+			<input type="number" id="delayVideo" step="1" onchange="changeDelay(this)"/>
+			
+			<button onclick="start()">start</button>
+			<button onclick="stop()">stop</button>
+			<button onclick="reset()">reset</button>
+			<button onclick="reload()">reload</button>
+			<div id="dashBoardPokemon">
+				<select id="dashBoardPokemonE" onchange="changePkmn(this,'E')"></select>
+				<select id="dashBoardPokemonD" onchange="changePkmn(this,'D')"></select>
+			</div>
+			<div id="trackerLink"></div>
+			<div id="TrackerDiv">
+				<iframe id="Tracker"></iframe>
+			</div>
+
+			<style>
+				iframe{
+					border: none;
+				}
+
+				#TrackerDiv{
+					width: 1831px;
+    				height: 655px;
+					overflow: hidden;
+				}
+				#Tracker{
+					margin-top: -182px;
+					width: 1831px;
+					height: 729px;
+				}
+			</style>
+			<script src="js/control.js"></script>
+			<script src="js/pkmn.js"></script>
+		</div>
+	</body>
+</html>

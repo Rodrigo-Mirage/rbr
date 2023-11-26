@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+        <style>
+            body {
+                margin: 0;
+            }
+        </style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+	</head>
+	<body>
+        
+	<fieldset> <legend>Controle de Live</legend>
+		<button id="start" style="float: right; width: 100%; background-color:chartreuse;" onclick="start()">Start Stream</button>
+		<button id="stop" style="float: right; width: 100%; background-color:crimson;" onclick="stop()">Stop Stream</button>
+	</fieldset>
+	
+	<fieldset> <legend>Trocar de Cena</legend>
+	<div id="Scenecontrol">
+	</div></fieldset>
+	
+        <script src="js/media.js"></script>
+	</body>
+</html>

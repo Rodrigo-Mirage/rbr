@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+	<div id="editExtraForm">
+		<div class="ExtraInfo">ID: <div id="id"></div></div>
+		<div class="ExtraInfo">Jogo: <div id="Game"></div></div>
+		<div class="ExtraInfo">Tracker: <select id="Tracker" onChange="change(this)"></select></div>
+		<div class="ExtraInfo"><div id="SubTracker"></div></div>
+		<div class="ExtraInfo">Layout: <select id="Layout" onChange="change(this)"></select></div>
+		<fieldset>
+			<legend>Players</legend>
+			<div id="Players"></div>
+		</fieldset>
+	</div>
+	
+	
+	<script src="js/extras.js"></script>
+	<script>
+		document.addEventListener('dialog-confirmed', function() {
+			SaveExtra();
+		});
+
+		document.addEventListener('dialog-dismissed', function() {
+		});
+	  </script>
+</body>
+</html>

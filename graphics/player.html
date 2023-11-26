@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="css/setup.css">
+		<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+		<style id="Fonts"></style>
+	</head>
+	<body>
+		<div id="container">
+			<video
+    id="player"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="360"
+    data-setup="{}"
+  >
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">
+        supports HTML5 video
+      </a>
+    </p>
+  </video>
+		</div>
+		<div id="Css"></div>
+
+
+		<script src="https://vjs.zencdn.net/7.17.0/video.js"></script>
+		<script src="player.js"></script>
+
+		<script>
+			
+			const {
+				host, hostname, href, origin, pathname, port, protocol, search
+			} = window.location
+
+			vPlayer = videojs('player', {
+			techOrder: ["html5", "youtube"],
+			autoplay: false,
+			sources: [{
+				type: "video/mp4",
+				src: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+			}]
+			});
+			vPlayer.on('playing', function(e) {
+			$("#info").html("playing...<br>url: " + vPlayer.currentSrc() + "<br>type:" + vPlayer.currentType());
+			});
+			console.log(`http://${hostname}:50505/hls/Mirage.m3u8`);
+			var vids = [{
+				type: "application/vnd.apple.mpegurl m3u8",
+				src: `http://${hostname}:50505/hls/Mirage.m3u8`
+			}
+			];
+
+			playVideo = function(n) {
+			vPlayer.src(vids[n]);
+			vPlayer.play();
+			}
+			playVideo(0)
+
+		</script>
+	</body>
+</html>

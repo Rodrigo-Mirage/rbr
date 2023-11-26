@@ -1,0 +1,369 @@
+{
+  "name": "rbr",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Rodrigo-Mirage",
+    "email": "mirage4d@hotmail.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.9.0",
+    "dashboardPanels": [
+      {
+        "name": "obs",
+        "title": "obs",
+        "width": 2,
+        "file": "obs.html",
+        "headerColor": "#525F78",
+        "workspace": "Scene Editing"
+      },
+      {
+        "name": "cast",
+        "title": "Cast",
+        "width": 3,
+        "file": "cast.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "donates",
+        "title": "Donates",
+        "width": 3,
+        "file": "donates.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "infos",
+        "title": "Infos",
+        "width": 3,
+        "file": "infos.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "layouts",
+        "title": "Layouts",
+        "width": 3,
+        "file": "layouts.html",
+        "headerColor": "#525F78",
+        "workspace": "Scene Editing"
+      },
+      {
+        "name": "backgrounds",
+        "title": "Setup e Backgrounds",
+        "width": 3,
+        "file": "background.html",
+        "headerColor": "#525F78",
+        "workspace": "Scene Editing"
+      },
+      {
+        "name": "media",
+        "title": "Media Control",
+        "width": 3,
+        "file": "media.html",
+        "headerColor": "#525F78"
+      },
+      {
+        "name": "trackerTemplate",
+        "title": "Tracker Templates",
+        "width": 3,
+        "file": "trackerTemplate.html",
+        "headerColor": "#525F78",
+        "workspace": "Scene Editing"
+      },
+      {
+        "name": "extras",
+        "title": "Extras",
+        "width": 3,
+        "file": "extras.html",
+        "headerColor": "#525F78",
+        "workspace": "Run Modifications"
+      },
+      {
+        "name": "security",
+        "title": "Login",
+        "width": 3,
+        "file": "security.html",
+        "headerColor": "#525F78",
+        "workspace": "RBR - Login"
+      },
+      {
+        "name": "singleRun",
+        "title": "Setup",
+        "width": 3,
+        "file": "single.html",
+        "headerColor": "#525F78",
+        "workspace": "Single Run"
+      },
+      {
+        "name": "single run - control",
+        "title": "Single run - Control",
+        "file": "control.html",
+        "headerColor": "#525F78",
+        "fullbleed": true
+      },
+      {
+        "name": "dizeres",
+        "title": "Dizeres",
+        "width": 3,
+        "file": "dizeres.html",
+        "headerColor": "#525F78",
+        "workspace": "Single Run"
+      },
+      {
+        "name": "lives",
+        "title": "lives",
+        "width": 3,
+        "file": "lives.html",
+        "headerColor": "#525F78",
+        "workspace": "Single Run"
+      },
+      {
+        "name": "videoControl",
+        "title": "Player",
+        "width": 3,
+        "file": "videoControl.html",
+        "headerColor": "#525F78",
+        "workspace": "Single Run"
+      },
+      {
+        "name": "livesMarathon",
+        "title": "Lives",
+        "width": 3,
+        "file": "livesMarathon.html",
+        "headerColor": "#525F78",
+        "workspace": "Marathon"
+      },
+      {
+        "name": "marathonVideoControl",
+        "title": "Controle",
+        "width": 3,
+        "file": "marathonVideoControl.html",
+        "headerColor": "#525F78",
+        "workspace": "Marathon"
+      },
+      {
+        "name": "users",
+        "title": "Admin",
+        "width": 5,
+        "file": "users.html",
+        "headerColor": "#525F78",
+        "workspace": "RBR - Login"
+      },
+      {
+        "name": "editLayouts",
+        "title": "Edit Layouts",
+        "width": 10,
+        "file": "editLayouts.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      },
+      {
+        "name": "editBackground",
+        "title": "Edit",
+        "width": 10,
+        "file": "editBackground.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      },
+      {
+        "name": "editExtra",
+        "title": "Edit Extra Info",
+        "width": 5,
+        "file": "editExtra.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      },
+      {
+        "name": "editCss",
+        "title": "Print CSS",
+        "width": 5,
+        "file": "editCss.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      },
+      {
+        "name": "crop",
+        "title": "Crop",
+        "width": 10,
+        "file": "crop.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      },{
+        "name": "cropMarathon",
+        "title": "cropMarathon",
+        "width": 10,
+        "file": "cropMarathon.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "save",
+            "type": "confirm"
+          },
+          {
+            "name": "cancel",
+            "type": "dismiss"
+          }
+        ]
+      }
+    ],
+    "graphics": [
+      {
+        "file": "single.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "single-setup.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "single-result.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "marathon_index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "marathon_next.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "marathon_setup.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "vertical.html",
+        "width": 1080,
+        "height": 1920,
+        "singleInstance": false
+      }
+    ],
+    "assetCategories": [
+    {
+      "name": "sponsors",
+      "title": "Sponsors",
+      "allowedTypes": [
+        "png"
+      ]
+    },{
+      "name": "sponsorsMarathon",
+      "title": "Sponsors da Maratona",
+      "allowedTypes": [
+        "png"
+      ]
+    },
+      {
+        "name": "frames",
+        "title": "Layout Frames",
+        "allowedTypes": [
+          "png"
+        ]
+      },
+      {
+        "name": "background",
+        "title": "Itens do Background",
+        "allowedTypes": [
+          "png",
+          "mp4",
+          "webm"
+        ]
+      },
+      {
+        "name": "fonts",
+        "title": "Fontes",
+        "allowedTypes": [
+          "otf",
+          "ttf"
+        ]
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bower-npm-resolver": "^0.11.0",
+    "livesplit-core": "^0.10.2",
+    "nodecg-utility-obs": "^6.1.7",
+    "obs-websocket-js": "^5.0.3"
+  }
+}

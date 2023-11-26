@@ -1,0 +1,886 @@
+body{
+    font-family: 'RBR';
+    color: #FFF;
+    overflow:hidden;
+}
+/*Fix*/
+
+.hidden{
+    display: none;
+}
+
+.fadeIn {
+    animation: fade-in 1s ease-in forwards;
+}
+
+.fadeOut {
+    opacity: 0;
+    animation: fade-out 1s ease-out forwards;
+}
+
+iframe{
+    border:0px;
+    overflow: hidden;
+    position: absolute;
+}
+
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+@keyframes fade-out {
+  0% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+@font-face {
+    font-family: "RBR";
+    src: url("../fonts/CynthoNextExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "RBR2";
+    src: url("../fonts/RussoOne-Regular.ttf");
+}
+
+
+#back, #videos, #front,#starting,#finish{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1920px;
+    width: 1080px;
+    overflow: hidden;
+}
+
+/*Defaults*/
+
+#back{
+    background-image: url("../img/fundo_vertical.png");
+    background-repeat: repeat;
+    /*animation: bgScroll 20s linear infinite;*/
+}
+
+@keyframes bgScroll {
+    0% {
+      background-position : 0px 0px
+    }
+    100% {
+      background-position : -808px -808px
+    }
+  }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#front{
+    background-image: url("../img/fundo_vertical.png");
+}
+
+#starting{
+    background-image: url("../img/intro.png");   
+    height: 985px;
+    width: 1920px;
+}
+
+#finish{
+    background-image: url("../img/final.png");
+    height: 985px;
+    width: 1920px;
+    background-size:contain;
+    background-position-x: 127px;
+}
+
+
+#front #Avatar0{     
+    position: absolute;
+    height: 56px;
+    width: 56px;
+    top: 586px;
+    left: 27px;
+
+}
+
+#front #Avatar1{ 
+    position: absolute;
+    height: 56px;
+    width: 56px;
+    top: 846px;
+    right: 29px;
+}
+
+#front #TitleDiv{
+    left: 298px;
+    bottom: 288px;
+    width: 502px;
+    height: 110px;
+    flex-direction: column;
+    font-family: "RBR2";
+}
+
+#front #game{
+    font-size: 3vw !important;
+}
+
+#front #title{
+    font-size: 2.6vw !important;
+}
+
+#front #subtitle{
+    font-size: 2vw !important;
+}
+
+#front #Nome0Div{ 
+    width: 317px;
+    height: 55px;
+    top: 586px;
+    left: 95px;
+    font-size: 30px;
+    justify-content: left;
+}
+
+#front #Nome1Div{ 
+    width: 317px;
+    height: 55px;
+    top: 847px;
+    right: 95px;
+    font-size: 30px;
+    justify-content: right;
+}
+
+#front #Nation0Div{ 
+    width: 345px;
+    height: 55px;
+    top: 586px;
+    left: 85px;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 92% 100%, 0% 100%);
+    background: linear-gradient(280deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+    overflow: hidden;
+}
+
+#front #Nation1Div{ 
+    width: 345px;
+    height: 55px;
+    top: 847px;
+    right: 89px;
+    -webkit-clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+#front #Nation0Div .cover{
+    position: relative;
+    width: 345px;
+    height: 55px;
+    background: linear-gradient(280deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+}
+
+#front #Nation1Div .cover{
+    position: relative;
+    width: 345px;
+    height: 105px;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 91%, rgba(0,0,0,1) 100%);
+}
+
+#front #Nation0Div img,#front #Nation1Div img{     
+    position: inherit;
+    width: 345px;
+    height: 105px;
+    background-size: cover;
+}
+
+
+#starting #Nation0Div img,#starting #Nation1Div img{     
+    position: inherit;
+    width: 47px;
+    height: 47px;
+    background-size: cover;
+}
+
+#starting #Nation0Div{ 
+    width: 47px;
+    height: 47px;
+    bottom: 229px;
+    left: 320px;
+    overflow: hidden;
+}
+
+#starting #Nation1Div{ 
+    width: 47px;
+    height: 47px;
+    bottom: 229px;
+    right: 320px;
+    overflow: hidden;
+}
+
+.result{
+    left: 202px;
+    width: 629px;
+    height: 253px;
+    flex-direction: column;
+    -ms-flex-item-align: auto;
+}
+
+.primeiro{
+    top: 330px;
+}
+
+.segundo{
+    top: 665px;
+}
+
+.ResultNomeDiv{
+    flex: 1;
+    font-size: 60px;
+}
+.ResultTwitchDiv{
+    flex: 1;
+    margin-top: 25px;
+    font-size: 25px;
+}
+.ResultTempoDiv{
+    flex: 1;
+    margin-top: -25px;
+    font-size: 40px;
+}
+
+/*
+#starting #vs{
+    position: absolute;
+    width: 1920px;
+    height: 330px;
+    bottom: 50px;
+    background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(0,0,0,1) 50%, rgba(2,0,36,0) 0%);
+}
+
+#starting #Nome0Div{ 
+    width: 317px;
+    height: 55px;
+    bottom: 175px;
+    left: 477px;
+    font-size: 30px;
+    justify-content: left;
+}
+
+#starting #Nome1Div{ 
+    width: 317px;
+    height: 55px;
+    bottom: 175px;
+    right: 477px;
+    font-size: 30px;
+    justify-content: left;
+}
+
+#starting #AvatarE{ 
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    bottom: 150px;
+    left: 320px;
+}
+
+#starting #AvatarD{ 
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    bottom: 110px;
+    right: 320px;
+}
+*/
+
+#starting #vs{
+    position: absolute;
+    width: 1920px;
+    height: 473px;
+    bottom: 50px;
+    font-size: 50px;
+}
+
+#starting #InfosDiv{ 
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    top: 0px;
+    left: 0px;
+}
+
+#starting #Nome0Div{ 
+    width: 317px;
+    height: 55px;
+    bottom: 260px;
+    left: 477px;
+    font-size: 50px;
+    justify-content: left;
+}
+
+#starting #Nome1Div{ 
+    width: 317px;
+    height: 55px;
+    bottom: 260px;
+    right: 477px;
+    font-size: 50px;
+    justify-content: right;
+}
+
+#starting #Avatar0{ 
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    bottom: 229px;
+    left: 320px;
+}
+
+#starting #Avatar1{ 
+    position: absolute;
+    height: 145px;
+    width: 145px;
+    bottom: 229px;
+    right: 320px;
+}
+
+
+
+#starting #TitleDiv{
+    left: 218px;
+    top: 357px;
+    width: 1500px;
+    height: 179px;
+    flex-direction: column;
+    font-family: "RBR2";
+}
+
+#starting #game{
+    font-size: 55px;
+}
+
+#starting #title{
+    font-size: 40px;
+}
+
+#starting #subtitle{
+    font-size: 25px;
+}
+
+#front #DiscordDiv{    
+    height: 153px;
+    top: 662px;
+    left: 40px;
+    width: 361px;
+    flex-direction: column;
+    font-family: "RBR2";
+}
+
+#PokemonDiv{
+    display: none;
+}
+
+.fir #PokemonDiv{
+    top: 292px;
+    left: 807px;
+    width: 500px;
+    display: block;
+}
+.Pokemon{
+    display: inline-block;
+    width: 150px;
+    height: 290px;
+}
+.pkmnImg{
+    width: 150px;
+    height: 150px;
+
+}
+.best{
+    background: #10fff869;
+}
+
+.statusDiv{
+    flex-direction:row;
+    justify-content: space-evenly;
+    width: 150px;
+    border: #10fff8 2px;
+    border-style: double;
+}
+.stats {
+    display: inline-block;
+    width: 111px;
+    padding-right: 15px;
+    padding-left: 24px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 17px;
+}
+
+.stats span{
+    float: right;
+    right: 10px;
+}
+.type {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: space-evenly;
+    width: 150px;
+    border: #10fff8 2px;
+    border-style: double;
+}
+.pkmnImg{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+    border: #10fff8 2px;
+    border-style: double;
+}
+
+.pkmnImg img{
+    width: 152px;
+}
+
+.fir .type img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+
+#front .discordItem{
+    width: inherit;
+}
+
+
+#front .discordItem div{
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 5px;
+    display: inline-block;
+}
+#front .discordItem img{
+    display: inline-block;
+    height:60px;
+    width: 60px;
+}
+
+
+#finish #DiscordDiv{
+    top: 361px;
+    right: 316px;
+    width: 747px;
+    flex-direction: column;
+    font-family: "RBR2";
+}
+
+#finish .discordItem{
+    width: 259px;
+}
+
+#finish .discordItem div{
+    font-size: 40px;
+    margin-top: 4px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+#finish .discordItem img{
+    display: inline-block;
+    height:70px;
+    width: 70px;
+}
+
+#finish #TitleDiv{
+    left: 218px;
+    top: 149px;
+    width: 1500px;
+    height: 179px;
+    flex-direction: column;
+    font-family: "RBR2";
+}
+
+#finish #game{
+    font-size: 55px;
+}
+
+#finish #title{
+    font-size: 40px;
+}
+
+#finish #subtitle{
+    font-size: 25px;
+}
+
+.frame{
+    overflow: hidden;
+    position: absolute;
+}
+.frame video{
+    object-fit: fill;
+}
+#VideoFrame0Game{
+    top: 81px;
+    left: 14px;
+    height: 607px;
+    width: 814px;
+}
+
+#VideoFrame1Game{
+    top: 81px;
+    right: 14px;
+    height: 607px;
+    width: 814px;
+}
+
+#VideoE, #VideoD{
+    object-fit: fill;
+    position: absolute;
+    display: flex;
+}
+
+
+
+#Twitch0Div{ 
+    left: 658px;
+    top: 47px;
+    font-size: 20px;
+    justify-content: left;
+
+}
+
+#Twitch1Div{ 
+    right: 658px;
+    top: 47px;
+    font-size: 20px;
+    justify-content: right;
+
+}
+
+#TimerDiv{    
+    left: 332px;
+    top: 696px;
+    font-size: 97px;
+    width: 209px;
+    height: 98px;
+    justify-content: left;
+    padding-left: 36px;
+    font-family: "RBR2";
+}
+
+#Assista{
+    position: absolute;
+    top: 705px;
+    left: 743px;
+    width: 311px;
+    height: 74px;
+}
+
+#starting #SponsorDiv{
+    top: 836px;
+    left: 698px;
+    height: 151px;
+    width: 516px;
+}
+#starting #SponsorDiv img{
+    max-height: 151px;
+    max-width: 516px;
+}
+
+#front #SponsorDiv{
+    top: 1641px;
+    left: 294px;
+    height: 151px;
+    width: 506px;
+}
+
+#front #SponsorDiv img{
+    max-height: 151px;
+    max-width: 506px;
+}
+
+#finish #SponsorDiv{
+    top: 798px;
+    left: 1122px;
+    height: 151px;
+    width: 516px;
+}
+#finish #SponsorDiv img{
+    max-height: 151px;
+    max-width: 516px;
+}
+
+
+#sponsor0, #sponsor1{
+    position: inherit;
+}
+
+#Tracker0{
+    top: 706px;
+    left: 13px;
+    width: 675px;
+    height: 278px;
+}
+
+#Tracker1{
+    top: 706px;
+    right: 14px;
+    width: 675px;
+    height: 278px;
+}
+
+#TrackerPrices{
+    top: 501px;
+    left: 822px;
+    width: 561px;
+    height: 416px;
+}
+
+#AdDiv{
+    font-family: "RBR2";
+    font-size: 40px;
+
+    top: 1837px;
+    left: 89px;
+    height: 85px;
+    width: 900px;
+    overflow: hidden;
+}
+
+#AdDiv span{
+    margin-right: 15px;    
+    text-shadow: 
+    1px 0px 0px white,   /* Right shadow */
+    -1px 0px 0px white,  /* Left shadow */
+    0px 1px 0px white,   /* Bottom shadow */
+    0px -1px 0px white;  /* Top shadow */
+}
+
+#Ad0, #Ad1{
+    position: absolute;
+    height: 85px;
+    width: 900px;
+    align-items: center;
+}
+#Ad0 div, #Ad1 div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.out{
+    left: 900px 
+}
+
+.scrollIn{
+    left: 0px;
+    animation: scrool-in 7s;
+}
+.scrollOut{
+    left: 900px;
+    animation: scrool-out 7s;
+}
+
+@keyframes scrool-in {
+    0% { left: 900px }
+    100% { left: 0px }
+}
+
+@keyframes scrool-out {
+    0% { left: 0px }
+    100% { left: -900px }
+}
+
+/*OOT*/
+.oot #Tracker0{
+    top: 706px;
+    left: 13px;
+    width: 675px;
+    height: 278px;
+}
+
+.oot #Tracker1{
+    top: 706px;
+    right: 14px;
+    width: 675px;
+    height: 278px;
+}
+
+.oot #TrackerPrices{
+    top: 501px;
+    left: 822px;
+    width: 561px;
+    height: 416px;
+}
+
+/*Full Item*/
+.fir #Tracker0{
+    top: -35px;
+    left: 545px;
+    width: 659px;
+    height: 248px;
+    transform: scale(0.61);
+}
+
+.fir #PokemonE{
+    position: absolute;
+    top: -107px;
+    left: -4px;
+    width: 160px;
+    height: 290px;
+}
+
+.fir #PokemonD{
+    position: absolute;
+    top: 627px;
+    left: -676px;
+    width: 160px;
+    height: 290px;
+}
+
+.fir #Tracker1{
+    top: 1285px;
+    right: 547px;
+    width: 659px;
+    height: 248px;
+    transform: scale(0.61);
+}
+
+.fir #TrackerPrices{
+    top: 501px;
+    left: 822px;
+    width: 561px;
+    height: 416px;
+}
+
+.fir #VideoFrame0{
+    overflow: hidden;
+    position: absolute;
+    top: 81px;
+    left: 14px;
+    height: 607px;
+    width: 814px;
+}
+
+.fir #VideoFrame1{
+    overflow: hidden;
+    position: absolute;
+    top: 81px;
+    right: 14px;
+    height: 607px;
+    width: 814px;
+}
+
+
+.frame.game{
+    height: 607px;
+    width: 814px;
+}
+.frame.camera{
+    height: 607px;
+    width: 814px;
+    top: 0px;
+    left: 0px;
+}
+.frame.tracker{
+    height: 277px;
+    width: 431px;
+}
+
+.frame.timer{
+    height: 55px;
+    width: 208px;
+    top: 8px;
+    left: 0px;
+}
+
+
+#front{
+    background-image: url("../img/vertical_frame_910.png");
+}
+
+#VideoFrame0Game{
+    overflow: hidden;
+    position: absolute;
+    top: 21px;
+    left: 22px;
+    height: 557px;
+    width: 638px;
+}
+
+#VideoFrame1Game{
+    overflow: hidden;
+    position: absolute;
+    top: 912px;
+    right: 16px;
+    height: 557px;
+    width: 638px;
+}
+
+.fir #VideoFrame0Tracker.frame.tracker{
+    top: 702px;
+    left: 176px;
+}
+
+.fir #VideoFrame1Tracker.frame.tracker{
+    top: 702px;
+    right: 176px;
+}
+
+
+.alttp .frame.tracker {
+    height: 275px;
+    width: 311px;
+}
+
+.alttp #VideoFrame0Tracker.frame.tracker{
+    top: 702px;
+    left: 176px;
+}
+
+.alttp #VideoFrame1Tracker.frame.tracker{
+    top: 702px;
+    right: 176px;
+}
+
+
+.alttp #TrackerPrices {
+    top: 61px;
+    left: 883px;
+    width: 561px;
+    height: 936px;
+}
+
+.alttp #Tracker0 {
+    top: 180px;
+    height: 266px;
+    left: 616px;
+    width: 519px;
+    transform: scale(0.75);
+}
+.alttp #Tracker1 {
+    top: 1059px;
+    height: 266px;
+    right: 624px;
+    width: 519px;
+    transform: scale(0.75);
+}
+
+#LivePix{
+    display:none;
+}
+
+.oot #LivePix{
+    display:block;
+    top: 58px;
+    height: 339px;
+    right: 811px;
+}
+
+#TitleDiv div{
+    overflow-wrap: break-word;
+    text-align: center;
+}

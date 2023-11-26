@@ -1,0 +1,243 @@
+body {
+    position: absolute;
+    overflow: hidden;
+    font-family: 'RBR2';
+    color: #FFF;
+}
+@font-face {
+    font-family: "RBR2";
+    src: url("../fonts/RussoOne-Regular.ttf");
+}
+
+#canvas{
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 0px;
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+}
+#GamesInfo1{
+
+    position: absolute;
+    top: 175px;
+    left: -170px;
+}
+#Donate{
+    position: absolute;
+    top: 326px;
+    left: 110px;
+    height: 100px;
+    width: 645px;
+    font-size: 53px;
+    text-align: center;
+}
+#frame{
+    position: absolute;
+    top:0;
+    left: 0;
+    border: 0px;
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+}
+
+#AdDiv{
+    position: absolute;
+    font-family: "RBR2";
+    font-size: 40px;
+
+    top: 998px;
+    left: 89px;
+    height: 85px;
+    width: 1747px;
+    overflow: hidden;
+}
+
+#rando{
+    top: 120px;
+    height: 882px;
+    width: 1095px;
+    position: absolute;
+    background-image: url(../img/letras.fw.png);
+}
+
+#later{
+    display: none;
+}
+
+#next div{      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    width: 464px;
+    font-size: 29px;
+    position: relative;
+}
+#next {      
+    top: 463px;
+    left: 671px;
+    height: 85px;
+    width: 464px;
+    font-size: 29px;
+    position: absolute;
+}
+
+span{
+    text-align: center;
+}
+
+
+
+#after0 {      
+    top: 463px;
+    right: 71px;
+    height: 85px;
+    width: 464px;
+    font-size: 29px;
+    position: absolute;
+}
+
+#after0 {      
+    top: 463px;
+    right: 71px;
+    height: 85px;
+    width: 464px;
+    font-size: 29px;
+    position: absolute;
+}
+#after0 div{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98px;
+    width: 464px;
+    font-size: 29px;
+    position: relative;
+    
+    margin-top: -59px;
+}
+
+#after1 {      
+    top: 463px;
+    right: 71px;
+    height: 85px;
+    width: 464px;
+    font-size: 29px;
+    position: absolute;
+}
+#after1 div{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98px;
+    width: 464px;
+    font-size: 29px;
+    position: relative;
+    
+    margin-top: -59px;
+}
+
+#SponsorDiv{    
+    top: 743px;
+    left: 109px;
+    height: 222px;
+    width: 645px;
+}
+
+#Host{
+    position: absolute;
+    top: 1045px;
+    left: 75px;
+    width: 136px;
+    text-shadow: 2px 2px #000;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    display: none;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+@font-face {
+    font-family: "Aseguir";
+    src: url("../fonts/A\ SEGUIR_CHALKBOY.zip") format("opentype");
+}
+
+@font-face {
+    font-family: "Chalk";
+    src: url("../fonts/DkCoolCrayon-xJyV.ttf") format("opentype");
+}
+
+.fadeIn {
+    animation: fade-in 1s ease-in forwards;
+}
+
+.fadeOut {
+    opacity: 0;
+    animation: fade-out 1s ease-out forwards;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}
+@keyframes fade-out {
+  0% { opacity: 1 }
+  50% { opacity: 0 }
+}
+
+#AdDiv span{
+    margin-right: 15px;    
+    text-shadow: 
+    1px 0px 0px white,   /* Right shadow */
+    -1px 0px 0px white,  /* Left shadow */
+    0px 1px 0px white,   /* Bottom shadow */
+    0px -1px 0px white;  /* Top shadow */
+}
+
+#Ad0, #Ad1{
+    position: absolute;
+    height: 85px;
+    width: 1747px;
+    align-items: center;
+}
+#Ad0 div, #Ad1 div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.out{
+    left: 1747px 
+}
+
+#sponsor0, #sponsor1{
+    position: inherit;
+}
+.scrollIn{
+    left: 0px;
+    animation: scrool-in 7s;
+}
+.scrollOut{
+    left: 1747px;
+    animation: scrool-out 7s;
+}
+
+@keyframes scrool-in {
+    0% { left: 1747px }
+    100% { left: 0px }
+}
+
+@keyframes scrool-out {
+    0% { left: 0px }
+    100% { left: -1747px }
+}

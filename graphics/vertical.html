@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style id="Fonts"></style>
+		<link rel="stylesheet" href="css/vertical.css">
+	</head>
+	<body>
+		<script>
+				function imgError(img){
+					img.src='./img/avatar_base.png';
+				}
+		</script>
+		<div id="back"></div>
+		<div id="videos">
+			<div id="VideoFrameEGame" class="frame game">
+				<video id="VideoEGame"></video>
+			</div>
+			<div id="VideoFrameETimer" class="frame timer">
+				<video id="VideoETimer" muted></video>
+			</div>
+			<div id="VideoFrameETracker" class="frame tracker">
+				<video id="VideoETracker" muted></video>
+			</div>
+			<div id="VideoFrameECamera" class="frame camera">
+				<video id="VideoECamera" muted></video>
+			</div>
+			<div id="VideoFrameDGame" class="frame game">
+				<video id="VideoDGame"></video>
+			</div>
+			<div id="VideoFrameDTimer" class="frame timer">
+				<video id="VideoDTimer" muted></video>
+			</div>
+			<div id="VideoFrameDTracker" class="frame tracker">
+				<video id="VideoDTracker" muted></video>
+			</div>
+			<div id="VideoFrameDCamera" class="frame camera">
+				<video id="VideoDCamera" muted></video>
+			</div>
+		</div>
+		<div id="front">
+			<div id="runnerInfo">
+				<div id="NationEDiv" class="container">
+					<img id="NationE" alt="" onerror="imgError(this)"/>
+					<div class="cover"></div>
+				</div>				
+				<div id="NationDDiv" class="container">
+					<img id="NationD" alt="" onerror="imgError(this)"/>
+					<div class="cover"></div>
+				</div>			
+				<div id="TwitchEDiv" class="container">
+					<div id="TwitchE"></div>
+				</div>			
+				<div id="TwitchDDiv" class="container">
+					<div id="TwitchD"></div>
+				</div>
+				<div id="NomeEDiv" class="container">
+					<div id="NomeE"></div>
+				</div>	
+				<div id="NomeDDiv" class="container">
+					<div id="NomeD"></div>
+				</div>			
+
+				<img id="AvatarE" alt="" onerror="imgError(this)"/>
+				<img id="AvatarD" alt="" onerror="imgError(this)"/>
+
+			</div>
+			<div id="TimerDiv" class="container">
+				<div id="timer"></div>
+			</div>
+			
+			<img id="Assista" src="./img/formulario.fw.png" alt="" />
+			<div id="TitleDiv" class="container">
+				<div id="game"></div>
+				<div id="title"></div>
+				<div id="subtitle"></div>
+			</div>
+			<div id="SponsorDiv" class="container">
+				<img id="sponsor0" />
+				<img id="sponsor1" class="hidden"/>
+			</div>
+			<div id="TrackerDiv">
+			</div>
+			<div id="PokemonDiv" class="container">
+				<div id="PokemonE" class="Pokemon"></div>
+				<div id="PokemonD" class="Pokemon"></div>
+			</div>
+
+			<div id="DiscordDiv" class="container"></div>
+			<div id="AdDiv" class="container">
+				<div id="Ad0" class="slideIn"><div>TEST1</div></div>
+				<div id="Ad1" class="out"></div>
+			</div>
+			<iframe id="LivePix" src="https://widget.livepix.gg/embed/774c3792-318d-4c8f-ae82-e6e65d461813" ></iframe>
+
+		</div>
+		<script
+		src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+		crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script type="module" src="./single.js"></script>
+		<script type="module" src="./videoController.js"></script>
+		<script type="module" src="./pkmn.js"></script>
+		<script>
+			
+			function setvideo(url,id,volume){
+				console.log(url,id,volume)
+				var video = document.getElementById(id);
+				var hls = new Hls();
+				hls.loadSource(url);
+				hls.attachMedia(video);
+				hls.on(Hls.Events.MANIFEST_PARSED,function() {
+					video.play();
+					video.volume = volume;
+				});
+			}
+		</script>
+	</body>
+</html>

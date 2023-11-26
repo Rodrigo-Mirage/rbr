@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			.monospace {
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+
+		<script
+    src="https://code.jquery.com/jquery-3.7.0.js"
+    integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+		<div id="protected">
+			<input id="Racetime" placeholder="Racetime">
+			<button onclick="getRT()">getRT</button>
+			<br>
+			<select id="Layout"></select>
+			<fieldset>
+				<legend>Player Esquerda</legend>
+				<input id="NomeE" placeholder="Nome">
+				<select id="NationE">
+					<option value="" disabled selected>Nacionalidade</option>
+				</select>
+				<input id="TwitchE" placeholder="Twitch">
+				<input id="StreamE" placeholder="Stream">
+				<input id="AvatarE" placeholder="Avatar">
+			</fieldset>
+			<fieldset>
+				<legend>Player Direita</legend>
+				<input id="NomeD" placeholder="Nome">
+				<select id="NationD">
+					<option value="" disabled selected>Nacionalidade</option>
+				</select>
+				<input id="TwitchD" placeholder="Twitch">
+				<input id="StreamD" placeholder="Stream">
+				<input id="AvatarD" placeholder="Avatar">
+			</fieldset>
+			
+			<input id="Game" placeholder="Jogo">
+			<input id="Title" placeholder="Titulo">
+			<input id="Subtitle" placeholder="Subtitulo">
+
+			<button onclick="Save()">Save</button>
+			<button onclick="Clear()">Clear</button>
+
+			<script src="js/single.js"></script>
+		</div>
+	</body>
+</html>

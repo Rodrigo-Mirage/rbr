@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style id="Fonts"></style>
+		<link rel="stylesheet" href="css/single.css">
+		<link rel="stylesheet" href="css/discord.css">
+	</head>
+	<body>
+		<script>
+				function imgError(img){
+					img.src='./img/avatar_base.png';
+				}
+		</script>
+		<div id="back"></div>
+		<div id="finish">
+			<div class="result container primeiro">
+				<div id="ResultNome1" class="ResultNomeDiv"></div>
+				<div id="ResultTwitch1" class="ResultTwitchDiv"></div>
+				<div id="ResultTempo1" class="ResultTempoDiv">Tempo Final : <span id="resultTempo"></span></div>
+			</div>
+			<div class="result container segundo">
+				<div id="ResultNome2" class="ResultNomeDiv"></div>
+				<div id="ResultTwitch2" class="ResultTwitchDiv"></div>
+				<div id="ResultTempo2" class="ResultTempoDiv">Tempo Final : <span id="resultTempo"></span></div>
+			</div>
+
+			
+			<div id="TitleDiv" class="container">
+				<div id="game"></div>
+				<div id="title"></div>
+				<div id="subtitle"></div>
+			</div>
+			<div id="SponsorDiv" class="container">
+				<img id="sponsor0" />
+				<img id="sponsor1" class="hidden"/>
+			</div>
+			
+			<div id="DiscordDiv" class="container"></div>
+			<iframe src="https://widget.livepix.gg/embed/774c3792-318d-4c8f-ae82-e6e65d461813" style="top: 373px;height: 348px;	right: 50px;"></iframe>
+			
+		</div>
+
+		<div id="AdDiv" class="container">
+			<div id="Ad0" class="slideIn"><div></div></div>
+			<div id="Ad1" class="out"></div>
+		</div>
+		<div id="Css"></div>
+
+		<script type="module" src="./single.js"></script>
+
+	</body>
+</html>

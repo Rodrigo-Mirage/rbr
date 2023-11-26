@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style id="Fonts"></style>
+		<link rel="stylesheet" href="css/marathon.css">
+	</head>
+	<body>
+		<script>
+				function imgError(img){
+					img.src='./img/avatar_base.png';
+				}
+		</script>
+		<div id="back"></div>
+		<div id="Cssback"></div>
+		<div id="videos"></div>
+		<div id="front">
+			<div id="runnerInfo">
+			</div>
+			<div id="TitleDiv" class="container">
+				<div id="title"></div>
+				<div id="subtitle"></div>
+			</div>
+			<div id="GameDiv" class="container"><div>Jogo: </div><div id="game"></div></div>
+			<div id="SystemDiv" class="container"><div>Sistema: </div><div id="system"></div></div>
+			<div id="EstimateDiv" class="container"><div>Estimativa: </div><div id="estimate"></div></div>
+			<div id="CategoryDiv" class="container"><div>Categoria: </div><div id="category"></div></div>
+			<div id="SponsorDiv" class="container">
+				<img id="sponsor0" />
+				<img id="sponsor1" class="hidden"/>
+			</div>
+			<div id="TimerDiv" class="container">
+				<div id="timer"></div>
+			</div>
+			<div id="TrackerDiv">
+				<iframe id="TrackerE" allowtransparency = "true"></iframe>
+				<iframe id="TrackerD" allowtransparency = "true"></iframe>
+				<iframe id="TrackerPrices" allowtransparency = "true"></iframe>
+			</div>
+			<div id="PokemonDiv" class="container">
+				<div id="PokemonE" class="Pokemon"></div>
+				<div id="PokemonD" class="Pokemon"></div>
+			</div>
+
+			<div id="HostDiv" class="container"><div>Host:</div><div id="Host"></div></div>
+			<div id="CouchDiv" class="container"><div>Couch:</div><div id="Couch"></div></div>
+			<div id="DiscordDiv" class="container"></div>
+			<div id="AdDiv" class="container">
+				<div id="Ad0" class="slideIn"></div>
+				<div id="Ad1" class="out"></div>
+			</div>
+
+		</div>
+		<div id="Css"></div>
+		<div id="CssMainExtra"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script type="module" src="./marathon.js"></script>
+		<script type="module" src="./pkmn.js"></script>
+		<script>
+			function setvideo(url,id,volume){
+				console.log(url,id,volume)
+				var video = document.getElementById(id);
+				var hls = new Hls();
+				hls.loadSource(url);
+				hls.attachMedia(video);
+				hls.on(Hls.Events.MANIFEST_PARSED,function() {
+					video.play();
+					video.volume = volume;
+				});
+			}
+		</script>
+	</body>
+</html>

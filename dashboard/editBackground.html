@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/dashboard.css" />
+	<style>
+		body {
+			margin: 0;
+		}
+		.InputLabel {
+			margin-top: 15px;
+			width: 528px;
+		}
+		.InputLabel textarea{
+			width: 528px;
+			height: 500px;
+		}
+	</style>
+</head>
+<body>
+	<div id="EditForm">
+		<div class="InputLabel"><span>Nome:</span><div><input onChange="InputChange(this,'name')" type="text" id="EditName"></div></div>
+		<div class="InputLabel" id="ExtraData"></div>
+		<br>
+		<div class="InputLabel"><span>HTML:</span><div><textarea onChange="InputChange(this,'html')" id="EditHTML"></textarea></div></div>
+		<div class="InputLabel"><span>CSS:</span><div><textarea onChange="InputChange(this,'css')" id="EditCSS"></textarea></div></div>		
+	</div>
+	
+	
+	<script src="js/background.js"></script>
+	<script>
+		document.addEventListener('dialog-opened', function() {
+		  // The user opened the dialog.
+		});
+
+		document.addEventListener('dialog-confirmed', function() {
+			SaveLayout();
+		});
+
+		document.addEventListener('dialog-dismissed', function() {
+		});
+	  </script>
+</body>
+</html>

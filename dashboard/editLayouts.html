@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+	<div id="EditForm">
+		<div class="InputLabel"><span>Nome:</span><div><input onChange="InputChange(this,'name')" type="text" id="Name"></div></div>
+		<div class="InputLabel"><span>Chave (css):</span><div><input onChange="InputChange(this,'size')" type="text" id="Size"></div></div>
+		<div class="InputLabel"><span>Jogadores:</span><div><input onChange="InputChange(this,'players')" type="number" id="Players"></div></div>	
+		<div class="InputLabel"><span>Frame:</span><div><select id="Frame" onChange="InputChange(this,'frame')" ></select></div></div>		
+		<div class="InputLabel"><span>Background:</span><div><select id="Background" onChange="InputChange(this,'background')" ></select></div></div>	
+		<div class="InputLabel check" ><span>Camera:</span><div><input type="checkbox" id="checkCamera" onchange="checkbox(this,'camera')"/></select></div></div>	
+		<div class="InputLabel check" ><span>Timer:</span><div><input type="checkbox" id="checkTimer" onchange="checkbox(this,'timer')"/></select></div></div>	
+		<div class="InputLabel check" ><span>Tracker:</span><div><input type="checkbox" id="checkTracker" onchange="checkbox(this,'tracker')"/></select></div></div>	
+		</div>
+		<div>
+
+			<fieldset id="CssFieldSet" class="collapsed">
+				<legend onClick="setCollapse(this)">CSS</legend>
+				
+				
+				<div id="Css"></div>
+			</fieldset>
+		</div>
+	</div>
+	
+	
+	<script src="js/layouts.js"></script>
+	<script>
+		document.addEventListener('dialog-opened', function() {
+		  // The user opened the dialog.
+		});
+
+		document.addEventListener('dialog-confirmed', function() {
+			SaveLayout();
+		});
+
+		document.addEventListener('dialog-dismissed', function() {
+		});
+	  </script>
+</body>
+</html>

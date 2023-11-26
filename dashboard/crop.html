@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+	<link rel="stylesheet" href="css/drag.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+		<select onchange="change(this.value)">
+			<option value="" selected>Layout</option>
+			<option value="s43">4:3</option>
+			<option value="s169">16:9</option>
+		</select>
+		<br>
+		<div id="crop" >
+			<div id="cropDiv">
+				<div id="cropperGame" class="resize-drag"></div>
+				<div id="cropperCamera" class="resize-drag"></div>
+				<div id="cropperTimer" class="resize-drag"></div>
+				<div id="cropperTracker" class="resize-drag"></div>
+			</div>
+			<video id="Video0" muted></video>
+			<div id ="PreviewGame" class ="preview"><video id="Video1" muted></video></div>
+			<div class ="previewCase">
+				<div class="tag">Adicionar Videos</div>
+				<div class="tag">Camera:<input type="checkbox" id="hasPrevCamera" onchange="ShowPrev(true)"/></div>
+				<div id ="PreviewCamera" class ="preview"><video id="Video2" muted></video></div>
+				<div class="tag">Timer:<input type="checkbox" id="hasPrevTimer" onchange="ShowPrev(true)"/></div>
+				<div id ="PreviewTimer" class ="preview"><video id="Video3" muted></video></div>
+				<div class="tag">Tracker: <input type="checkbox" id="hasPrevTracker" onchange="ShowPrev(true)"/></div>
+				<div id ="PreviewTracker" class ="preview"><video id="Video4" muted></video></div>
+			</div>
+			
+
+		</div>
+
+		<div class="Controller">
+            <div class = "cropstick">
+                <span>X/Y</span>
+                <i class="fa-solid fa-circle-arrow-left" aria-hidden="true" onclick="changeCrop('x','-')"></i>
+                <i class="fa-solid fa-circle-arrow-up" aria-hidden="true" onclick="changeCrop('y','-')"></i>
+                <i class="fa-solid fa-circle-arrow-right" aria-hidden="true" onclick="changeCrop('x','+')"></i>
+                <i class="fa-solid fa-circle-arrow-down" aria-hidden="true" onclick="changeCrop('y','+')"></i>
+            </div>
+            <div class = "cropstick">
+                <span>H/W</span>
+                <i class="fa-solid fa-circle-arrow-left" aria-hidden="true" onclick="changeCrop('w','-')"> </i>
+                <i class="fa-solid fa-circle-arrow-up" aria-hidden="true" onclick="changeCrop('h','-')"> </i>
+                <i class="fa-solid fa-circle-arrow-right" aria-hidden="true" onclick="changeCrop('w','+')"> </i>
+                <i class="fa-solid fa-circle-arrow-down" aria-hidden="true" onclick="changeCrop('h','+')"> </i>
+            </div>
+        </div>
+	<div id="Css">
+	</div>
+	<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+	<script src="js/crop.js"></script>
+	<script src="js/drag.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+	<script>
+		function setvideo(url,id){
+			var video = document.getElementById(id);
+			var hls = new Hls();
+			hls.loadSource(url);
+			hls.attachMedia(video);
+			hls.on(Hls.Events.MANIFEST_PARSED,function() {
+				video.play();
+				setTimeout(()=>{
+				video.volume =0;
+				},1000)
+			});
+		}
+	</script>
+	<script>
+		document.addEventListener('dialog-opened', function() {
+		});
+
+		document.addEventListener('dialog-confirmed', function() {
+			Save()
+		});
+
+		document.addEventListener('dialog-dismissed', function() {
+		});
+	  </script>
+</body>
+</html>

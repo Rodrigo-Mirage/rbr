@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+	<div id="EditForm">
+		<div class="InputLabel"><span>Nome:</span><div><input onChange="InputChange(this,'name')" type="text" id="Name"></div></div>
+		<div class="InputLabel"><span>Chave (crop):</span><div><input onChange="InputChange(this,'size')" type="text" id="Size"></div></div>
+		<div class="InputLabel"><span>Jogadores:</span><div><input onChange="InputChange(this,'players')" type="number" id="Players"></div></div>		
+		<div class="InputLabel"><span>Background:</span><div><select id="Background" onChange="InputChange(this,'background')" ></select></div>
+		</div>
+		<div>
+			<fieldset class="collapsed">
+				<legend onClick="setCollapse(this)">Jogos</legend>
+				<div id="Positions"></div>
+			</fieldset>
+			<fieldset class="collapsed">
+				<legend onClick="setCollapse(this)">Trackers</legend>
+				<div id="Trackers"></div>
+			</fieldset>
+			<fieldset class="collapsed">
+				<legend onClick="setCollapse(this)" >Cameras</legend>
+				<div id="Cameras"></div>
+			</fieldset>
+			<fieldset class="collapsed">
+				<legend onClick="setCollapse(this)">Lower Screens</legend>
+				<div id="Lowers"></div>
+			</fieldset>
+			<fieldset id="CssFieldSet" class="collapsed">
+				<legend onClick="setCollapse(this)">CSS</legend>
+				
+				
+				<div id="Css"></div>
+			</fieldset>
+		</div>
+	</div>
+	
+	
+	<script src="js/layouts.js"></script>
+	<script>
+		document.addEventListener('dialog-opened', function() {
+		  // The user opened the dialog.
+		});
+
+		document.addEventListener('dialog-confirmed', function() {
+			SaveLayout();
+		});
+
+		document.addEventListener('dialog-dismissed', function() {
+		});
+	  </script>
+</body>
+</html>

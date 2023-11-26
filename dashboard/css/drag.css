@@ -1,0 +1,8 @@
+.resize-drag {
+    height: 40px;
+    width: 30px;
+    border: red 2px dashed;
+    touch-action: none;
+    /* This makes things *much* easier */
+    box-sizing: border-box;
+  }

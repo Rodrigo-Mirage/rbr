@@ -1,0 +1,68 @@
+body {
+    overflow: hidden;
+    font-family: 'Chalk';
+    color: #FFF;
+}
+
+div{
+    position: absolute;
+    justify-content: center;
+}
+
+span{
+    
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#canvas{
+    top:0;
+    left: 0;
+    border: 0px;
+    height: 1080px;
+    width: 1920px;
+    overflow: hidden;
+}
+
+#Timer{
+    font-family: 'Aseguir';
+}
+
+.paused{
+    color: #ec6868;
+}
+.running{
+    color: #49d59c;
+}
+.finished{
+    color: #5e80f0;
+}
+.stopped{
+    color: #227483;
+}
+.player{
+    position: absolute;
+}
+
+span{
+    text-align: center;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+@font-face {
+    font-family: "Chalk";
+    src: url("../fonts/DkCoolCrayon-xJyV.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Aseguir";
+    src: url("../fonts/ChalkboyRegular-vmXe7.otf") format("opentype");
+}
+
+iframe{
+    border: 0px;
+    overflow: hidden !important;
+}

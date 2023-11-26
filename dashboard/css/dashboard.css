@@ -1,0 +1,554 @@
+.hidden{
+  display: none !important;
+}
+
+.round-button {
+  border-radius: 8px;
+}
+
+.cropsNext > button {
+  border-radius: 8px;
+}
+
+.hidden{
+  display: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switchDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switchDiv .title{
+margin-left: 10px;
+}
+
+
+#CurrentRunners{
+  font-size: 35px ;
+}
+fieldset{
+  margin: 10px;
+}
+
+.set{
+  background-color: green;
+}
+.unset{
+  background-color: gray;
+
+}
+
+.bubble_off{
+  background-color: gray;
+  border-radius: 5px;
+  color: #000;
+  margin: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#List{
+  margin-bottom: 15px;
+}
+#newLayout{
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 318px;
+}
+
+.ListItem{
+  width: 350px;
+  height: 30px;
+  display: flex;
+  justify-content: center; 
+}
+.ListItem:hover{
+  background-color: rgb(45, 73, 104);
+}
+
+.ListItem button{
+  height: 25px;
+}
+
+.ItemName{
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center; 
+}
+
+.greenBtn{}
+
+.redBtn{}
+
+.ItemName span{
+  text-align: center;
+}
+
+.InputLabel{
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 40px;
+  align-items: center; 
+
+}
+
+.InputLabel span{
+  text-align: center;
+}
+
+input:disabled {
+  cursor: default;
+  background-color: -internal-light-dark(rgba(239, 239, 239, 0.3), rgba(59, 59, 59, 0.3)) !important;
+  color: -internal-light-dark(rgb(247, 195, 195), rgb(170, 170, 170)) !important;
+  border-color: rgba(118, 118, 118, 0.3);
+}
+
+*:disabled {
+  background-color: dimgrey;
+  color: linen;
+  opacity: 1;
+}
+
+.layoutFormArea{
+  display: flex;
+  width: 650px;
+  height: 50px;
+
+}
+.layoutFormLabel{
+  display: flex;
+  height: 50px;
+  width: 70px;
+}
+.layoutFormLabel button{
+  height: 25px;
+  width: 25px;
+}
+.layoutFormLabelAuto{
+  display: block;
+  height: 49px;
+  width: 149px;
+
+}
+.layoutFormLabelAuto button{
+  position: relative;
+  left: 169px;
+  top: -180px;
+  height: 25px;
+  width: 25px;
+}
+
+
+.layoutFormItem{
+  display: grid;
+  height: 24px;
+}
+
+.layoutFormItem input{
+  width: 110px;
+}
+
+#Positions,#Trackers,#Cameras,#Lowers {
+  width: 110px;
+
+}
+#EditForm fieldset{
+  display: inline-block;
+  width: 575px;
+}
+
+#GameList{
+  height: 250px;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+}
+
+.GameListItem{
+  display: block;
+  width: 354px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.GameListItem:hover{
+  background-color: #405464;
+  cursor:zoom-in;
+}
+
+.ExtraInfo{
+  display: inline-flex;
+  width: 300px;
+  height: 50px;
+}
+
+.ExtraInfo div{
+  margin-left: 15px;
+}
+
+.ExtraInfo select{
+  margin-left: 15px;
+  height: 25px;
+}
+
+.PlayerInfo{
+  display: inline-table;
+  margin-left: 15px;
+  padding: 10px;
+  width: 150px;
+  height: 160px;
+  background-color: #405464;
+}
+
+
+.PlayerInfo select{
+  margin-top: 5px;
+}
+
+.PlayerInfo input{
+  margin-top: 5px;
+  width: 94px;
+}
+
+.extraInfoItem{
+  display: inline-flex;
+  width: 360px;
+  height: 40px;
+}
+.extraInfoItem span{
+  margin-right: 5px;
+}
+
+.extraInfoPlayer div {
+  display: inline-flex;
+  min-width: 80px;
+  position: relative;
+  margin-top: 5px;
+}
+
+.collapsed{
+  overflow: hidden;
+  height: 5px;
+}
+
+#CssFieldSet{
+  width: 1205px !important;
+}
+
+#CssFieldSet fieldset{
+  width: 1000px !important;
+}
+
+#CssFieldSet fieldset fieldset{
+  width: 170px !important;
+}
+
+#CssFieldSet fieldset fieldset textArea{
+  height: 150px;
+}
+
+#Css textarea{
+  width: 279px;
+  height: 500px;
+}
+#Users div{
+  display: block;
+}
+#Users div div{
+  width: 307px;
+  display: inline-block;
+}
+#Areas div{
+  display: block;
+}
+#Areas div div{
+  width: 165px;
+  display: inline-block;
+}
+#Areas div .label{
+  width: 438px;
+  display: inline-block;
+}
+#Areas input,#Users input{
+  width: 55px;
+
+}
+
+.cropstick{
+  display: inline-block;
+  height: 75px;
+  width: 75px;
+}
+
+.cropstick span{
+  position: absolute;
+  font-size: 11px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.cropstick .fa-circle-arrow-left{
+  position: absolute;
+  margin-top: 25px;
+  height: 10px;
+  width: 10px;
+}
+
+.cropstick .fa-circle-arrow-up{
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 0px;
+  height: 10px;
+  width: 10px;
+}
+
+.cropstick .fa-circle-arrow-right{
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 25px;
+  height: 10px;
+  width: 10px;
+}
+
+.cropstick .fa-circle-arrow-down{
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 50px;
+  height: 10px;
+  width: 10px;
+}
+
+.s169 #PreviewGame{
+  height: 480px;
+  width: 854px;
+}
+
+.s43 #PreviewGame{
+  width: 640px;
+  height: 480px;
+}
+
+#PreviewGame{
+  overflow: hidden;
+  position: absolute;
+  left: 887px;
+}
+
+#PreviewCamera{
+  overflow: hidden;
+  height: 90px;
+  width: 160px;
+}
+
+#PreviewTimer{
+  overflow: hidden;
+  height: 60px;
+  width: 300px;
+}
+
+#PreviewTracker{
+  overflow: hidden;
+  height: 290px;
+  width: 130px;
+}
+
+#Video0{
+  height: 480px;
+  width: 854px;
+  position: absolute;
+  z-index: -2;
+  display: inline-block;
+}
+
+
+video{
+  object-fit: fill;
+}
+
+.preview{
+  overflow: hidden;
+  display: inline-block;
+}
+
+.previewCase{
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  flex-direction: column;
+  width: 200px;
+  max-height: 480px;
+  justify-content:center;
+}
+.previewCase .tag{
+  display: block;
+}
+
+.previewCase .preview{
+  display: block;
+}
+
+#cropDiv{
+  position: absolute;
+  height: 480px;
+  width: 854px;
+}
+
+.resize-drag{
+  border: #ca2828 2px dashed;
+  min-height: 10px !important;
+  min-width: 10px !important;
+  position: absolute;
+  top: 0px;
+}
+
+#cropperTimer{
+  border: #28ca30 2px dashed;
+}
+#cropperCamera{
+  border: #2b28ca 2px dashed;
+}
+#cropperTracker{
+  border: #e9da0e 2px dashed;
+}
+
+#top{
+  height: 80px;
+}
+#bottom{ 
+  height: 60px;
+}
+#left{
+  width: 200px;
+}
+#right{
+  width: 254px;
+  right: 0px;
+}
+.cropCover{
+  width: auto;
+  height: auto;
+    background-color: #00000057;
+}
+
+#rbr_crop{
+  left: -42px !important;
+  width: 100% IMPORTANT !important;
+}
+
+.Controller{
+  margin-top: 488px;
+}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+#mainContent{
+  overflow: scroll;
+  height: 740px;
+}
+
+.mainContent{
+  height: 900px;
+}
+
+.check{
+  width: 40px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/obs.css">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+	<div id="form">
+		<fieldset> <legend>Config</legend>
+		<div style="margin-bottom: 5px;">Ip: <input type="text" id="ipElement" name="ipElement" style="float: right;"/></div>
+		<div style="margin-bottom: 5px;">port: <input type="text" id="portElement" name="portElement" style="float: right;"/></div>
+		<div style="margin-bottom: 25px;">pass: <input type="password" id="passwordElement" name="passwordElement" style="float: right;"/></div>
+		<button id="conn" onclick="connect()">Connect</button>
+		<button id="disconn" onclick="disconnect()">Disconnect</button>
+	</fieldset>
+	</div>
+
+
+	<script src="js/obs.js"></script>
+</body>
+</html>

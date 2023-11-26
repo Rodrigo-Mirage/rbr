@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+	<fieldset>
+		<legend>Area Inicial</legend>
+		<button onclick="GetInputKindList()">GetInputKindList</button><br>
+		<button onclick="createCollection()">Criar Coleção</button>
+		<button onclick="createScenes()">Criar Cenas</button>
+		<button onclick="createSources()">Criar Sources</button><br>
+	</fieldset>
+	<fieldset>
+		<legend>IDs das Sources</legend>
+		<button onclick="setupBase()">Setup Base</button>
+		<button onclick="setupNext()">Setup Next</button>
+		<button onclick="setLists()">Save Lists</button>
+		<button onclick="reset()">Apagar</button>
+		<br>
+		Sources:
+		<div id="BaseList"></div>
+		<div id="NextList"></div>
+		<br>
+		
+	</fieldset>
+
+    <script src="js/setup.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+    input:read-only{
+        background-color: grey;
+    }
+    
+    .on #conn{
+        display: block;
+    }
+    
+    .on #disconn{
+        display: none;
+    }
+
+    .off #conn{
+        display: none;
+    }
+
+    .off #disconn{
+        display: block;
+    }
+    
