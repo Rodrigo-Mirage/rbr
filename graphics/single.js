@@ -81,10 +81,8 @@ function setup(val){
                 return "zelda-"+layout;
             case "fir":
                 return "pokemon-"+layout;   
-            case "sotn":
-                return "castlevania-"+layout;   
             default:
-            return layout;
+            return "base";
         }
     }
 
@@ -108,7 +106,7 @@ function setup(val){
         }
         if(layout && document.getElementById('Tracker'+index+'Div')){
             //document.getElementById('TrackerE').src = `${urlBase}${model}/view/${playerE.name}`;
-            var url = `${urlBase}${model()}/view/${index==0?"player1-esquerda":"player2-direita"}`;
+            var url = `${urlBase}${model()}/view/${player.name}`;
             document.getElementById('Tracker'+index+'Div').innerHTML = `<iframe id="Tracker${index}" src="${url}" allowtransparency = "true"></iframe>`;
         }
     

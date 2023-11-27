@@ -95,8 +95,8 @@ function setupNext(data){
 
         html += `<div id="next">
             <div><span>${data.game?data.game.toUpperCase():""}</span></div>
+            <div><span>${data.category?data.category.toUpperCase():""}</span></div>
             <div><span>${listplayers(data.teams)}</span></div>
-            <div><span>${data.estimate.toUpperCase()}</span></div>
         </div>`;
     }
 
@@ -119,8 +119,8 @@ function setupAfter(data){
         if(data[i]){
             html += `<div id="after${i}" class="after">
             <div><span>${data[i].game?data[i].game.toUpperCase():""}</span></div>
+            <div><span>${data[i].category?data[i].category.toUpperCase():""}</span></div>
             <div><span>${listplayers(data[i].teams)}</span></div>
-            <div><span>${data[i].estimate.toUpperCase()}</span></div>
             </div>`;
         }
     }
@@ -159,16 +159,6 @@ const getFontSize = (textLength,baseSize) => {
     return `${fontSize}vw`;
 }
 
-var donate = nodecg.Replicant('donates');
-
-donate.on('change', (newVal, oldVal) => {
-    if(newVal != oldVal){ 
-        if(document.getElementById('Donate')){
-            document.getElementById('Donate').innerText = `R$ ${newVal}`;
-        }
-    }
-});
-
 var fundoInfo = nodecg.Replicant('BackgroundData');
 
 fundoInfo.on('change', (newVal, oldVal) => {
@@ -189,95 +179,3 @@ function setupHtml(data,id){
     }
     
 }
-
-var sponsors = nodecg.Replicant('assets:sponsorsMarathon');
-var sponsorsList;
-sponsors.on('change', (newVal, oldVal) => {
-    if(newVal != oldVal){
-        sponsorsList = newVal; 
-        preload("sponsorsMarathon",newVal)
-    }
-});
-
-function preload(asset,imgList){
-    var load="";
-    imgList.forEach((e)=>{
-        load += "<img src='/assets/rbr/"+asset+"/"+e.base+"' style='width: 1px;'/>";
-    })
-    if(document.getElementById('load'+asset)){
-        document.getElementById('load'+asset).innerHTML = load;
-    }
-
-}
-
-function spinerSponsors(index){
-    nodecg.readReplicant("assets:sponsorsMarathon",'rbr', (sponsorsList) => {
-        var w = 0;
-        var h = 0;
-
-        if(document.getElementById('SponsorDiv')){
-            w = document.getElementById('SponsorDiv').offsetWidth;
-            h = document.getElementById('SponsorDiv').offsetHeight;
-        }
-
-        if(document.getElementById('sponsor1')){
-            document.getElementById('sponsor0').style = `max-width:${w}px;max-height:${h}px;`;
-            document.getElementById('sponsor1').style = `max-width:${w}px;max-height:${h}px;`;
-                if(sponsorsList){
-                    if (sponsorsList.length > 0){
-                        if(index >= sponsorsList.length){
-                            index = 0;
-                        }
-
-                        var Iin,Iout;
-                        if(document.getElementById('sponsor1').className == "hidden" || document.getElementById('sponsor1').className == "fadeOut"){
-                            Iout = document.getElementById('sponsor0');
-                            Iin  = document.getElementById('sponsor1');
-                        }else{
-                            Iin = document.getElementById('sponsor0');
-                            Iout  = document.getElementById('sponsor1');
-                        }
-                        if(Iin.src != sponsorsList[index].url){
-                            Iin.src = "/assets/rbr/sponsorsMarathon/"+sponsorsList[index].base;
-                            Iout.className = "fadeOut";
-                            Iin.className = "fadeIn";
-                        }
-                        setTimeout(() => {
-                            spinerSponsors(index + 1);
-                        }, 15000);
-                    }
-                }
-        }
-    })
-}
-
-function spinerAds(index){
-    nodecg.readReplicant("ads",'rbr', (run) => {
-        if(run){
-            if(document.getElementById('AdDiv')){
-                var limit = run.length || 1;
-                if(index >= limit){
-                    index = 0;
-                }
-                var nexttext = run[index];
-                var Iin,Iout;
-                if(document.getElementById('Ad1').className == "scrollOut"){
-                    Iout = document.getElementById('Ad0');
-                    Iin  = document.getElementById('Ad1');
-                }else{
-                    Iin = document.getElementById('Ad0');
-                    Iout  = document.getElementById('Ad1');
-                }
-                Iin.innerHTML = "<div>"+nexttext+"</div>";
-                Iout.className = "scrollOut";
-                Iin.className = "scrollIn";
-            }
-        }
-        setTimeout(() => {
-            spinerAds(index + 1);
-        }, 20000);
-    });
-}
-
-spinerSponsors(0)
-spinerAds(0)

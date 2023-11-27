@@ -15,9 +15,7 @@ var itemsBaseList =[
     "DiscordDiv",
     "SponsorDiv",
     "PokemonDiv",
-    "AdDiv",
-    "TrackerPrices",
-    "Donate"
+    "TrackerPrices"
 ];
 var framesItems = [
     "Game",

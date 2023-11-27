@@ -37,13 +37,6 @@
         "headerColor": "#525F78"
       },
       {
-        "name": "donates",
-        "title": "Donates",
-        "width": 3,
-        "file": "donates.html",
-        "headerColor": "#525F78"
-      },
-      {
         "name": "infos",
         "title": "Infos",
         "width": 3,
@@ -74,12 +67,28 @@
         "headerColor": "#525F78"
       },
       {
+        "name": "trackerTemplate",
+        "title": "Tracker Templates",
+        "width": 3,
+        "file": "trackerTemplate.html",
+        "headerColor": "#525F78",
+        "workspace": "Scene Editing"
+      },
+      {
         "name": "extras",
         "title": "Extras",
         "width": 3,
         "file": "extras.html",
         "headerColor": "#525F78",
         "workspace": "Run Modifications"
+      },
+      {
+        "name": "security",
+        "title": "Login",
+        "width": 3,
+        "file": "security.html",
+        "headerColor": "#525F78",
+        "workspace": "RBR - Login"
       },
       {
         "name": "singleRun",
@@ -119,6 +128,30 @@
         "file": "videoControl.html",
         "headerColor": "#525F78",
         "workspace": "Single Run"
+      },
+      {
+        "name": "livesMarathon",
+        "title": "Lives",
+        "width": 3,
+        "file": "livesMarathon.html",
+        "headerColor": "#525F78",
+        "workspace": "Marathon"
+      },
+      {
+        "name": "marathonVideoControl",
+        "title": "Controle",
+        "width": 3,
+        "file": "marathonVideoControl.html",
+        "headerColor": "#525F78",
+        "workspace": "Marathon"
+      },
+      {
+        "name": "users",
+        "title": "Admin",
+        "width": 5,
+        "file": "users.html",
+        "headerColor": "#525F78",
+        "workspace": "RBR - Login"
       },
       {
         "name": "editLayouts",
@@ -224,6 +257,36 @@
     ],
     "graphics": [
       {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "next.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "setup.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "fundo.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
+        "file": "player.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      },
+      {
         "file": "single.html",
         "width": 1920,
         "height": 1080,
@@ -257,12 +320,6 @@
         "file": "marathon_setup.html",
         "width": 1920,
         "height": 1080,
-        "singleInstance": false
-      },
-      {
-        "file": "vertical.html",
-        "width": 1080,
-        "height": 1920,
         "singleInstance": false
       }
     ],

@@ -18,34 +18,12 @@ delayVideo.on('change', (newVal, oldVal) => {
 single.on('change', (newVal, oldVal) => {
     if(newVal){
 
+        var urlBase = "https://tracker.rbr.watch/#/manager?restream-";
         var layout = newVal.layout;
-        var urlBase = "https://tracker.rbr.watch/#/manager?";
-        var model =  ()=>{ 
-            switch(layout){
-                case "oot":
-                    return "zelda-"+layout;
-                case "alttp":
-                    return "zelda-"+layout;
-                case "mmr":
-                    return "zelda-"+layout;
-                case "fir":
-                    return "pokemon-"+layout;   
-                case "sotn":
-                    return "castlevania-"+layout;   
-                default:
-                return layout;
-            }
-        }
-        //var playerE = newVal.players[0].name;
-        //var playerD = newVal.players[1].name;
-
-        var playerE = "player1-esquerda";
-        var playerD = "player2-direita";
-
-        if(layout && playerE && playerD){
-
-            var url = urlBase + `${model()}=${playerE}${layout == 'oot'|| layout == 'alttp'?`&${model()}-dungeons=dungeons`:''}&${model()}=${playerD}`;
-            
+        var playerE = newVal.players[0];
+        var playerD = newVal.players[1];
+        if(layout && playerE.name && playerD.name){
+            var url = urlBase + `${layout}=${playerE.name}${layout == 'oot'?'&restream-oot-dungeons=rbrRestream':''}${layout == 'alttp'?'&restream-alttp-dungeons=rbrRestream':''}&restream-${layout}=${playerD.name}`;
             document.getElementById("trackerLink").innerHTML = `<a target="_blank" href="${url}">${url}</a>`;
             document.getElementById("Tracker").src = url;
         }

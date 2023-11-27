@@ -96,16 +96,6 @@ currentExtra.on('change', (newVal, oldVal) => {
   }
 });
 
-var donate = nodecg.Replicant('donates');
-
-donate.on('change', (newVal, oldVal) => {
-    if(newVal != oldVal){ 
-        if(document.getElementById('Donate')){
-            document.getElementById('Donate').innerText = `R$ ${newVal}`;
-        }
-    }
-});
-
 var cropData = nodecg.Replicant('marathonCrop');
 
 var cropDataLocal; 
@@ -200,17 +190,7 @@ function reSearchVideo(index,area){
 }
 
 function spinerSponsors(index){
-    var w = 0;
-    var h = 0;
-
-    if(document.getElementById('SponsorDiv')){
-        w = document.getElementById('SponsorDiv').offsetWidth;
-        h = document.getElementById('SponsorDiv').offsetHeight;
-    }
-
     if(document.getElementById('sponsor1')){
-            document.getElementById('sponsor0').style = `max-width:${w}px;max-height:${h}px;`;
-            document.getElementById('sponsor1').style = `max-width:${w}px;max-height:${h}px;`;
             if(sponsorsList){
                 if (sponsorsList.length > 0){
                     if(index >= sponsorsList.length){
@@ -530,7 +510,7 @@ css.on("change", (newVal, oldVal) => {
 if(element.css.background && element.css.background != "Selecione"){
           html += `
 .${element.size} #back{
-${element.css.background?`background: url('/assets/rbr/background/${element.css.background}.png');`:""}
+${element.css.background?`background: url('/assets/rbr/frames/${element.css.background}.png');`:""}
 }
 `;}
 
