@@ -4,7 +4,6 @@ const {OBSUtility} = require('nodecg-utility-obs');
 const security = require('./security');
 const obsMirage = require('./obs');
 const rbrTimer = require('./timer');
-const discord = require('./discord');
 const extraData = require('./extra');
 
 module.exports = function (nodecg) {
