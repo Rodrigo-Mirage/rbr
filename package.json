@@ -74,28 +74,12 @@
         "headerColor": "#525F78"
       },
       {
-        "name": "trackerTemplate",
-        "title": "Tracker Templates",
-        "width": 3,
-        "file": "trackerTemplate.html",
-        "headerColor": "#525F78",
-        "workspace": "Scene Editing"
-      },
-      {
         "name": "extras",
         "title": "Extras",
         "width": 3,
         "file": "extras.html",
         "headerColor": "#525F78",
         "workspace": "Run Modifications"
-      },
-      {
-        "name": "security",
-        "title": "Login",
-        "width": 3,
-        "file": "security.html",
-        "headerColor": "#525F78",
-        "workspace": "RBR - Login"
       },
       {
         "name": "singleRun",
@@ -135,30 +119,6 @@
         "file": "videoControl.html",
         "headerColor": "#525F78",
         "workspace": "Single Run"
-      },
-      {
-        "name": "livesMarathon",
-        "title": "Lives",
-        "width": 3,
-        "file": "livesMarathon.html",
-        "headerColor": "#525F78",
-        "workspace": "Marathon"
-      },
-      {
-        "name": "marathonVideoControl",
-        "title": "Controle",
-        "width": 3,
-        "file": "marathonVideoControl.html",
-        "headerColor": "#525F78",
-        "workspace": "Marathon"
-      },
-      {
-        "name": "users",
-        "title": "Admin",
-        "width": 5,
-        "file": "users.html",
-        "headerColor": "#525F78",
-        "workspace": "RBR - Login"
       },
       {
         "name": "editLayouts",
